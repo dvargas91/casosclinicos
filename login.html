@@ -1,4 +1,4 @@
-﻿
+﻿<!DOCTYPE html>
 <html lang="es">
   	<head>
 	    <meta charset="utf-8">
@@ -6,23 +6,19 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-				
-		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
-		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-		
-		<script type="text/javascript" src="../js/login.js"></script>
-		<script type="text/javascript" src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="../js/localization/messages_es.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	   
 	    <title>Sistema de casos clínicos</title>
 	
 	    <!-- Bootstrap core CSS -->
-	    <link href="bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
-	
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
 	    <!-- Custom styles for this template -->
-	    <link href="css/login.css" rel="stylesheet">
+	    <link href="css/normalize.css" rel="stylesheet">
+	    <link href="css/custom.css" rel="stylesheet">
+
 	</head>
+
 
 	<body>
 		<!-- Fixed navbar -->
@@ -36,36 +32,44 @@
 				<p class="navbar-brand">Sistema de casos clínicos</p></div>
 	      	</div>
 	    </div>
-	    
+	    <div class="header">&nbsp;</div>
 	    <div class="container">
 	    	<!-- Main component for a primary marketing message or call to action -->
-			<div class="jumbotron">
-				<div id="alert" class=""></div>
-			   	<form name="login" id="login" method="POST" class="form-signin" role="form">
-			        <h2 class="form-signin-heading">Login</h2>
-			        <div class="form-group">
-				        <label class="control-label" for="user">Usuario (*)</label>
-				        <input id="user" name="user" type="text" class="form-control" autofocus />
-				    </div>
-			        <div class="form-group">
-				        <label class="control-label" for="password">Contraseña (*)</label>
-				        <input id="password" name="password" type="password" class="form-control" />
-				    </div>
-			        <button id="submit"  class="btn btn-lg btn-primary btn-block" type="button">Enviar</button>
-		      		<input id="accion" name="accion" type="hidden" value="autenticar" />
-		      	</form>
+			<div class="row">
+				<div class="col-xs-4 col-xs-offset-4">
+					<div id="alert" class=""></div>
+				   	<form name="login" id="login" method="POST" class="form-signin" role="form">
+				        <h2>Login</h2>
+				        <div class="form-group">
+					        <label class="control-label" for="user">Usuario (*)</label>
+					        <input id="user" name="user" type="text" required="required" class="form-control" autofocus />
+					    </div>
+				        <div class="form-group">
+					        <label class="control-label" for="password">Contraseña (*)</label>
+					        <input id="password" name="password" type="password" required="required" class="form-control" />
+					    </div>
+				        <button id="submit"  class="btn btn-md btn-primary" type="button">Enviar</button>
+			      		<input id="accion" name="accion" type="hidden" value="autenticar" />
+			      	</form>
+			      </div>
 	    	</div>
-	    </div> 
-	    
-	    <div class="ct-footer">
+	    </div>
+	    <!-- footer -->
+		<div class="footer">
 			<div class="container">
-				<div class="col-xs-12 col-md-6" align="center">
-					<a href="http://www.uniandes.edu.co/" target="_blank"><img src="images/footer-logo-uniandes.png" alt="Universidad de los Andes" title="Universidad de los Andes"></a>
+				<div class="row">
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://www.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-med.png" alt="Universidad de los Andes" title="Universidad de los Andes"/>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://conectate.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-conectate.png" alt="Conecta-TE | Centro de Innovación en Tecnología y Educación" title="Conecta-TE | Centro de Innovación en Tecnología y Educación"/>
+						</a>
+					</div>
 				</div>
-				<div class="col-xs-12 col-md-6" align="center">
-					<a href="http://conectate.uniandes.edu.co/" target="_blank"><img src="images/footer-logo-conectate.png" alt="Conecta-TE | Centro de Innovaci�n en Tecnolog�a y Educaci�n" title="Conecta-TE | Centro de Innovaci�n en Tecnolog�a y Educaci�n"></a>
-				</div>
-			</div>
-		</div>
+			</div>  
+		</div> 
 	</body>
 </html>
