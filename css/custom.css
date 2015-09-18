@@ -47,6 +47,22 @@ h2.tit-general:before {
     color: white;
     padding: 30px 0px;
 }
+/* icons */
+.btn-icon.btn-icon-add {
+	background-position: 6px 6px;
+}
+.btn-group>.btn-icon.btn-icon-edit {
+	background-position: 4px -26px;
+}
+.btn-group>.btn-icon.btn-icon-copy {
+	background-position: 4px -57px;
+}
+.btn-group>.btn-icon.btn-icon-publi {
+	background-position: 5px -87px;
+}
+.btn-group>.btn-icon.btn-icon-closer {
+	background-position: 4px -117px;
+}
 /* Login */
 #login {
 	padding: 25px;

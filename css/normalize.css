@@ -10,6 +10,10 @@ body {
 .navbar>.container .navbar-brand  {
 	margin: 0;
 }
+select,
+.btn-icon {
+	cursor: pointer;
+}
 /* Regular CSS */
 h2 {
 	font-size: 2.4em;
@@ -27,14 +31,19 @@ h3.tit-verde,
 h2.tit-general {
 	color: #00857C;
 }
-.btn-primary {
+.btn-primary,
+.btn-icon {
 	background-color: #00857C;
     border-color: #036B64;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-icon:hover,
+.btn-icon:focus,
+.btn-icon:active,
+.btn-icon.active {
     background-color: #036B64;
     border-color: #00857C;
 }
@@ -55,8 +64,105 @@ h2.tit-general {
 	padding-top: 20px;
 	margin-top: 30px;
 }
+.btn-icon {
+	width: 34px;
+	height: 34px;
+	border-radius: 50px;
+	font-size: 0px;
+	line-height: 0px;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-image: url('../images/sprite-icon.png');
+	background-size: 20px auto;
+	position: relative;
+}
+.btn-icon:before {
+	content: attr(name);
+	padding: 6px;
+	display: block;
+	position: absolute;
+	left: -40px;
+	top: -30px;
+	color: white;
+	line-height: 1em;
+	font-size: 12px;
+	background-color: rgba(0, 0, 0, .70);
+	border-radius: 25px;
+	text-align: center;
+	width: 120px;
+	opacity: 0;
+}
+.btn-icon:after {
+	content: '';
+	position: absolute;
+	left: 6px;
+	top: -6px;
+	width: 0; 
+	height: 0; 
+	line-height: 0px;
+	font-size: 0px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid rgba(0, 0, 0, .70);
+	opacity: 0;
+}
+.btn-icon:hover:before,
+.btn-icon:hover:after {
+	opacity: 1;
+}
+.btn-group>.btn-icon {
+	width: 25px;
+	height: 28px;
+	background-size: 17px auto;
+	background-color: #c1c1c1;
+    border-color: #A9A7A7;
+    margin: 0px 5px;
+}
+.btn-group>.btn-icon:before {
+	left: -44px;
+}
+.btn-group>.btn-icon:after {
+	left: 2px;
+}
+.btn-group>.btn-icon:hover,
+.btn-group>.btn-icon:focus,
+.btn-group>.btn-icon:active,
+.btn-group>.btn-icon.active {
+    background-color: #A9A7A7;
+    border-color: #6B6B6B;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+	border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+	border-radius: 50px;
+}
+.btn-group>.btn:last-child:not(:first-child),
+.btn-group>.dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+/* table */
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+	    border-top: 1px solid #afafaf;
+}
+.table>tbody>tr:nth-child(even) td {
+	background: transparent;
+}
+.table>tbody>tr:nth-child(odd) td  {
+	background: rgba(255, 255, 255, 0.6);
+}
 /* CSS animation */
-.btn-primary {
+.btn-primary,
+.btn-icon,
+.btn-icon:before,
+.btn-icon:after {
 	-webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;
@@ -65,7 +171,13 @@ h2.tit-general {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
-.btn-primary.active {
+.btn-primary.active,
+.btn-icon:hover,
+.btn-icon:focus,
+.btn-icon:active,
+.btn-icon.active,
+.btn-icon:hover:before,
+.btn-icon:hover:after {
 	-webkit-transition: all 300ms ease-out;
     -moz-transition: all 300ms ease-out;
     -o-transition: all 300ms ease-out;

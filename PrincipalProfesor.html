@@ -49,37 +49,103 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h2 class="tit-general">Listado de casos por curso</h3>
+					<h2 class="tit-general">Listado de casos por curso</h2>
 				</div>
 			</div>				
-				<div class="row">
-					<div class="col-md-12" align="center">
-						<form name="selectCurso" id="selectCurso" method="POST">
-							<div class="row">
-								<div class="col-md-12" align="left">
-									<div class="form-group" id="cursos">
-										<label class="control-label" for="curso"><b>Cursos</b></label>
-									<select class="form-control" id="curso" name="curso"><option value="1,2,3">Todos</option><option value="1">2015-20_MEDI-4028 Medicina General (Sección 1)</option><option value="2">2015-20_MEDI-4030 Neurología (Sección 2)</option><option value="3">2015-20_MEDI-4037 Cardiología (Sección 3)</option></select></div>
-								</div>
-							</div>
-							<input id="accion" name="accion" type="hidden" value="pintarTablaCasosProfesor">
-						</form>
-						<div id="alert" class=""></div>
-			   			<form name="casos" id="casos" method="POST">
-							<div class="row">
-								<div class="col-md-12" align="right">
-									<button id="popupAdicionar***0" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"> </span> Adicionar</button>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">&nbsp;</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12" align="center" id="tablaCasos"><table class="table table-hover"><tbody><tr><td valign="middle"><b>Título del caso</b></td><td align="center" valign="middle"><b>Fecha de creación</b></td><td valign="middle"><b>Fecha de apertura</b></td><td valign="middle"><b>Fecha de cierre</b></td><td valign="middle"><b>Estado</b></td><td valign="middle" width="100px"><b>Acción</b></td></tr><tr><td valign="middle">Caso de prueba </td><td valign="middle">2015-09-15 10:13:02</td><td valign="middle">2015-09-15 00:00:00</td><td valign="middle">2015-09-30 23:00:00</td><td valign="middle">Publicado</td><td><div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group"><button title="Editar caso" type="button" class="btn btn-default" id="popupEditar***2">(E)</button><button title="Cerrar caso" type="button" class="btn btn-default" id="cerrarCaso***2">(C)</button><button title="Duplicar caso" type="button" class="btn btn-default" id="popupDuplicarCaso***2">(D)</button></div></td></tr><tr><td valign="middle">Caso de prueba 1</td><td valign="middle">2015-09-17 11:55:05</td><td valign="middle">2015-09-17 11:55:05</td><td valign="middle">2015-09-17 11:55:05</td><td valign="middle">Cerrado</td><td><div class="btn-group btn-group-xs" role="group" aria-label="Extra-small button group"><button title="Editar caso" type="button" class="btn btn-default" id="popupEditar***3">(E)</button><button title="Publicar caso" type="button" class="btn btn-default" id="popupPublicar***3">(P)</button><button title="Duplicar caso" type="button" class="btn btn-default" id="popupDuplicarCaso***3">(D)</button></div></td></tr></tbody></table></div>
-							</div>
-						</form>
-					</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+					<div id="alert" class=""></div>
+					<form name="selectCurso" id="selectCurso" method="POST">
+						<div class="form-group" id="cursos">
+							<label class="control-label" for="curso">
+								<b>Cursos</b>
+							</label>
+							<select class="form-control" id="curso" name="curso">
+								<option value="1,2,3">Todos</option>
+								<option value="1">2015-20_MEDI-4028 Medicina General (Sección 1)</option>
+								<option value="2">2015-20_MEDI-4030 Neurología (Sección 2)</option>
+								<option value="3">2015-20_MEDI-4037 Cardiología (Sección 3)</option>
+							</select>
+						</div>
+						<input id="accion" name="accion" type="hidden" value="pintarTablaCasosProfesor">
+					</form>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+			   		<form name="casos" id="casos" method="POST">
+						<div class="row">
+							<button id="popupAdicionar***0" class="btn btn-icon btn-icon-add pull-right" type="button" name="Crear caso">Crear caso</button>
+						</div>
+						<div class="row">
+							<div class="col-md-12" align="center" id="tablaCasos">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Título del caso</th>
+											<th align="center">Fecha de creación</th>
+											<th>Fecha de apertura</th>
+											<th>Fecha de cierre</th>
+											<th>Estado</th>
+											<th>Acción</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												Caso de prueba
+											</td>
+											<td>
+												2015-09-15 10:13:02
+											</td>
+											<td>
+												2015-09-15 00:00:00
+											</td>
+											<td>
+												2015-09-30 23:00:00
+											</td>
+											<td>
+												Publicado
+											</td>
+											<td>
+												<div class="btn-group" role="group" aria-label="Extra-small button group">
+													<button name="Editar caso" type="button" class="btn btn-icon btn-icon-edit" id="popupEditar***2">Editar Caso</button>
+													<button name="Cerrar caso" type="button" class="btn btn-icon btn-icon-closer" id="cerrarCaso***2">Cerrar Caso</button>
+													<button name="Duplicar caso" type="button" class="btn btn-icon btn-icon-copy" id="popupDuplicarCaso***2">Duplicar Caso</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Caso de prueba
+											</td>
+											<td>
+												2015-09-15 10:13:02
+											</td>
+											<td>
+												2015-09-15 00:00:00
+											</td>
+											<td>
+												2015-09-30 23:00:00
+											</td>
+											<td>
+												Cerrado
+											</td>
+											<td>
+												<div class="btn-group" role="group" aria-label="Extra-small button group">
+													<button name="Editar caso" type="button" class="btn btn-icon btn-icon-edit" id="popupEditar***2">Editar Caso</button>
+													<button name="Publicar caso" type="button" class="btn btn-icon btn-icon-publi" id="cerrarCaso***2">Publicar Caso</button>
+													<button name="Duplicar caso" type="button" class="btn btn-icon btn-icon-copy" id="popupDuplicarCaso***2">Duplicar Caso</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>  
 	    
 	    <!-- footer -->
