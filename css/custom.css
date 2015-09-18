@@ -63,14 +63,14 @@ h2.tit-general:before {
 .btn-group>.btn-icon.btn-icon-closer {
 	background-position: 4px -117px;
 }
-/* Login */
-#login {
+/* form */
+form.form-signin {
 	padding: 25px;
 	box-shadow: 0px 0px 4px rgba(0,0,0,0.435);
 	background: white;
 	border-radius: 10px;
 }
-#login h2 {
+form.form-signin  h2 {
 	margin: 0px 0px 10px -25px;
 	border-left: 5px solid #00857C;
 	padding: 0px 0px 0px 20px;

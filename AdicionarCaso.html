@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	   
+	    <title>Sistema de casos clínicos</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Custom styles for this template -->
+	    <link href="css/normalize.css" rel="stylesheet">
+	    <link href="css/custom.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top ct-navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#nav">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+				<p class="navbar-brand">Sistema de casos clínicos</p></div>
+	        	<div class="navbar-collapse collapse" id="nav">
+	          		<ul class="nav navbar-nav">
+	            		<li><a href="PrincipalProfesor.php">Principal</a></li>
+	          		</ul>
+	          		<ul class="nav navbar-nav navbar-right">
+	            		<li class="dropdown">
+		              		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Profesor de Prueba 1 <b class="caret"></b></a>
+		              		<ul class="dropdown-menu">
+		              					              			<li><a href="PrincipalProfesor.php">Cambiar rol a Profesor</a></li>		              			<li><a href="Logout.php">Cerrar sesión</a></li>
+		              		</ul>
+	            		</li>
+	          		</ul>
+	          	</div>
+	      	</div>
+	    </div>
+	    
+	    <div class="header">&nbsp;</div>
+	    
+	    <div class="container">
+	    	<!-- Main component for a primary marketing message or call to action -->
+			<div class="row">
+				<div class="col-xs-5 col-xs-offset-4">
+					<div id="alert" class=""></div>
+				   	<form name="adicionar" id="adicionar" method="POST" class="form-signin" role="form">
+				        <h2>Nuevo caso</h2>
+				        <div class="form-group" id="cursos">
+							<label class="control-label" for="curso">
+								<b>Cursos</b>
+							</label>
+							<select class="form-control" id="curso" name="curso">
+								<option value="1">2015-20_MEDI-4028 Medicina General (Sección 1)</option>
+								<option value="2">2015-20_MEDI-4030 Neurología (Sección 2)</option>
+								<option value="3">2015-20_MEDI-4037 Cardiología (Sección 3)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="tituloProfesor"><b>Título del caso para el profesor:  (*)</b></label>
+							<input id="tituloProfesor" name="tituloProfesor" type="text" class="form-control"/>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="tituloEstudiante"><b>Título del caso para el estudiante:  (*)</b></label>
+							<input id="tituloEstudiante" name="tituloEstudiante" type="text" class="form-control"/>
+						</div>
+				        <div class="form-group">
+							<label class="control-label" for="intentos"><b>Número de intentos:  (*)</b></label>
+							<input id="intentos" name="intentos" type="text" class="form-control"/>
+						</div>
+						<div class="checkbox">
+							<label><input type="checkbox" name="autoaprendizaje" value="1"><b>Auto aprendizaje (*)</b></label>
+					    </div>
+					    <div class="checkbox">
+							<label><input type="checkbox" name="evaluacion" value="1"><b>Evaluación adicional (*)</b></label>
+					    </div>
+						<div align="center">
+							<button id="submit"  class="btn btn-md btn-primary" type="button">Enviar</button>
+						</div>
+			      		<input id="accion" name="accion" type="hidden" value="adicionarCaso" />
+			      	</form>
+			      </div>
+	    	</div>
+	    </div> 
+	    
+	    <!-- footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://www.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-med.png" alt="Universidad de los Andes" title="Universidad de los Andes"/>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://conectate.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-conectate.png" alt="Conecta-TE | Centro de Innovación en Tecnología y Educación" title="Conecta-TE | Centro de Innovación en Tecnología y Educación"/>
+						</a>
+					</div>
+				</div>
+			</div>  
+		</div> 
+	</body>
+</html>
