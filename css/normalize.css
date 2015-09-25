@@ -31,6 +31,10 @@ h3.tit-verde,
 h2.tit-general {
 	color: #00857C;
 }
+h3.subt-general {
+    color: #00857C;
+    padding-left: 25px;
+}
 .btn-primary,
 .btn-icon {
 	background-color: #00857C;

@@ -1,0 +1,538 @@
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	   
+	    <title>Sistema de casos clínicos</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Custom styles for this template -->
+	    <link href="css/normalize.css" rel="stylesheet">
+	    <link href="css/custom.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top ct-navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#nav">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+				<p class="navbar-brand">Sistema de casos clínicos</p></div>
+	        	<div class="navbar-collapse collapse" id="nav">
+	          		<ul class="nav navbar-nav">
+	            		<li><a href="#">Principal</a></li>
+	          		</ul>
+	          		<ul class="nav navbar-nav navbar-right">
+	            		<li class="dropdown">
+		              		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Estudiante 1 <b class="caret"></b></a>
+		              		<ul class="dropdown-menu">
+		              		<li><a href="Logout.php">Cerrar sesión</a></li>
+		              		</ul>
+	            		</li>
+	          		</ul>
+	          	</div>
+	      	</div>
+		</div>
+    	
+    	<div class="header">&nbsp;</div>
+    	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="tit-general">Caso: Caso 2 intentos y evaluación</h2>
+				</div>
+			</div>				
+			<div class="row">
+				<div class="col-xs-12">
+			   		<!-------->
+                    <div id="content">
+                        <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                            <li class="active"><a href="#Descripcion" data-toggle="tab">Descripción caso</a></li>
+                            <li><a href="#Revision" data-toggle="tab">Revisión por sistemas</a></li>
+                            <li><a href="#Examen" data-toggle="tab">Examen físico</a></li>
+                            <li><a href="#Impresiones" data-toggle="tab">Impresiones diagnósticas</a></li>
+                            <li><a href="#Pruebas" data-toggle="tab">Pruebas diagnósticas</a></li>
+                            <li><a href="#Diagnostico" data-toggle="tab">Diagnóstico final</a></li>
+                            <li><a href="#Gravedad" data-toggle="tab">Gravedad</a></li>
+                            <li><a href="#Tratamiento" data-toggle="tab">Tratamiento</a></li>
+                        </ul>
+                        <div id="my-tab-content" class="tab-content">
+                            <div class="tab-pane active" id="Descripcion">
+                                <h3 class="subt-general">Descripción caso</h3>
+                                <p>Descripción caso</p>
+                            </div>
+                            <div class="tab-pane" id="Revision">
+                                <h3 class="subt-general">Revisión por sistemas</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form name="casos" id="casos" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12" align="center" id="tablaCasos">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Categoría</th>
+                                                                <th>Pregunta</th>
+                                                                <th>Opción</th>
+                                                                <th>Retroalimentación</th>
+                                                                <th>Resp. Estudiante</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ¿---------?
+                                                                </td>
+                                                                <td>
+                                                                    1
+                                                                </td>
+                                                                <td>
+                                                                    Ninguna
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ¿---------?
+                                                                </td>
+                                                                <td>
+                                                                    2
+                                                                </td>
+                                                                <td>
+                                                                    Ninguna
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Examen">
+                                <h3 class="subt-general">Examen físico</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form name="casos" id="casos" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12" align="center" id="tablaCasos">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Categoría</th>
+                                                                <th>Examen</th>
+                                                                <th>Interpretación</th>
+                                                                <th>Retroalimentación</th>
+                                                                <th>Resp. Estudiante</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    Ninguna
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                               <tr>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    Ninguna
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Impresiones">
+                                <h3 class="subt-general">Impresiones diagnósticas</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form name="casos" id="casos" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12" align="center" id="tablaCasos">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Diagnóstico</th>
+                                                                <th>Opción</th>
+                                                                <th>Retroalimentación</th>
+                                                                <th>Resp. Estudiante</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Asma
+                                                                </td>
+                                                                <td>
+                                                                    Probable
+                                                                </td>
+                                                                <td>
+                                                                    Historia de tos, disnea y sibilancias aparición intermitente, relacionado con factores ambientales, periodos asintomático, diagnostico clínico de asma.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    EPOC
+                                                                </td>
+                                                                <td>
+                                                                    Improbable
+                                                                </td>
+                                                                <td>
+                                                                    Diagnóstico improbable
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Reflujo gastro esofágico
+                                                                </td>
+                                                                <td>
+                                                                    Probable
+                                                                </td>
+                                                                <td>
+                                                                    Puede ser una causa de tos recurrente, no tiene síntomas de reflujo, y tiene otros hallazgos clínicos que hacen ma probable el diagnostico de asma.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Rinitis alérgica
+                                                                </td>
+                                                                <td>
+                                                                    Por historia
+                                                                </td>
+                                                                <td>
+                                                                    Historia compatible con rinitis alérgica
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Bronquitis crónica
+                                                                </td>
+                                                                <td>
+                                                                    Improbable
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Pruebas">
+                                <h3 class="subt-general">Pruebas diagnósticas</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form name="casos" id="casos" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12" align="center" id="tablaCasos">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Categoría</th>
+                                                                <th>Prueba</th>
+                                                                <th>Opción/Interpretación</th>
+                                                                <th>Retroalimentación</th>
+                                                                <th>Resp. Estudiante</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Laboratorio clínico
+                                                                </td>
+                                                                <td>
+                                                                    Glucosa mg%
+                                                                </td>
+                                                                <td>
+                                                                    Necesaria<hr>Normal
+                                                                </td>
+                                                                <td>
+                                                                    Retroalimentación de porqué necesaria y de interpretación
+                                                                </td>
+                                                                <td>
+                                                                    No seleccionado<hr>No seleccionado
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Laboratorio clínico
+                                                                </td>
+                                                                <td>
+                                                                    Hemograma
+                                                                </td>
+                                                                <td>
+                                                                    Necesaria<hr>Normal
+                                                                </td>
+                                                                <td>
+                                                                    Retroalimentación de porqué necesaria y de interpretación
+                                                                </td>
+                                                                <td>
+                                                                    No seleccionado<hr>No seleccionado
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Laboratorio clínico
+                                                                </td>
+                                                                <td>
+                                                                    Nitrógeno Ureico (BUN)
+                                                                </td>
+                                                                <td>
+                                                                    Necesaria<hr>Normal
+                                                                </td>
+                                                                <td>
+                                                                    Retroalimentación de porqué necesaria y de interpretación
+                                                                </td>
+                                                                <td>
+                                                                    No seleccionado<hr>No seleccionado
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Laboratorio clínico
+                                                                </td>
+                                                                <td>
+                                                                    Creatinina mg/ dl
+                                                                </td>
+                                                                <td>
+                                                                    Necesaria<hr>Normal
+                                                                </td>
+                                                                <td>
+                                                                    Retroalimentación de porqué necesaria y de interpretación
+                                                                </td>
+                                                                <td>
+                                                                    No seleccionado<hr>No seleccionado
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Diagnostico">
+                                <h3 class="subt-general">Diagnóstico final</h3>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form name="casos" id="casos" method="POST">
+                                            <div class="row">
+                                                <div class="col-md-12" align="center" id="tablaCasos">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Diagnóstico</th>
+                                                                <th>Opción</th>
+                                                                <th>Retroalimentación</th>
+                                                                <th>Resp. Estudiante</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    Asma
+                                                                </td>
+                                                                <td>
+                                                                    Principal confirmado
+                                                                </td>
+                                                                <td>
+                                                                    Síntomas persistentes en los últimos meses, mas de tres días a la semana, sin tratamiento.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    EPOC
+                                                                </td>
+                                                                <td>
+                                                                    Descartado
+                                                                </td>
+                                                                <td>
+                                                                    Diagnóstico improbable.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Reflujo gastro esofágico
+                                                                </td>
+                                                                <td>
+                                                                    Descartado
+                                                                </td>
+                                                                <td>
+                                                                    Puede ser una causa de tos recurrente, no tiene síntomas de reflujo, y tiene otros hallazgos clínicos que hacen ma probable el diagnostico de asma.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Rinitis alérgica
+                                                                </td>
+                                                                <td>
+                                                                    Por historia
+                                                                </td>
+                                                                <td>
+                                                                    Historia compatible con rinitis alérgica
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Bronquitis crónica
+                                                                </td>
+                                                                <td>
+                                                                    Descartado
+                                                                </td>
+                                                                <td>
+                                                                    Es improbale. Se descarta.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Bronquitis crónica
+                                                                </td>
+                                                                <td>
+                                                                    Descartado
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    Crisis de asma
+                                                                </td>
+                                                                <td>
+                                                                    Confirmado
+                                                                </td>
+                                                                <td>
+                                                                    La crisis es fuerte.
+                                                                </td>
+                                                                <td>
+                                                                    ----------
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="Gravedad">
+                                <h3 class="subt-general">Gravedad</h3>
+                                <p>Gravedad</p>
+                            </div>
+                            <div class="tab-pane" id="Tratamiento">
+                                <h3 class="subt-general">Tratamiento</h3>
+                                <p>Tratamiento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>  
+	    
+	    <!-- footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://www.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-med.png" alt="Universidad de los Andes" title="Universidad de los Andes"/>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://conectate.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-conectate.png" alt="Conecta-TE | Centro de Innovación en Tecnología y Educación" title="Conecta-TE | Centro de Innovación en Tecnología y Educación"/>
+						</a>
+					</div>
+				</div>
+			</div>  
+		</div> 
+	</body>
+</html>

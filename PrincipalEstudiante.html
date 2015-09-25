@@ -1,0 +1,157 @@
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	   
+	    <title>Sistema de casos clínicos</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Custom styles for this template -->
+	    <link href="css/normalize.css" rel="stylesheet">
+	    <link href="css/custom.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<!-- Fixed navbar -->
+	    <div class="navbar navbar-default navbar-fixed-top ct-navbar" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#nav">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+				<p class="navbar-brand">Sistema de casos clínicos</p></div>
+	        	<div class="navbar-collapse collapse" id="nav">
+	          		<ul class="nav navbar-nav">
+	            		<li><a href="#">Principal</a></li>
+	          		</ul>
+	          		<ul class="nav navbar-nav navbar-right">
+	            		<li class="dropdown">
+		              		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Estudiante 1 <b class="caret"></b></a>
+		              		<ul class="dropdown-menu">
+		              		<li><a href="Logout.php">Cerrar sesión</a></li>
+		              		</ul>
+	            		</li>
+	          		</ul>
+	          	</div>
+	      	</div>
+		</div>
+    	
+    	<div class="header">&nbsp;</div>
+    	
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="tit-general">Listado de casos por curso</h2>
+				</div>
+			</div>				
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+					<div id="alert" class=""></div>
+					<form name="selectCurso" id="selectCurso" method="POST">
+						<div class="form-group" id="cursos">
+							<label class="control-label" for="curso">
+								<b>Cursos</b>
+							</label>
+							<select class="form-control" id="curso" name="curso">
+								<option value="1,2,3">Todos</option>
+								<option value="1">2015-20_MEDI-4028 Medicina General (Sección 1)</option>
+								<option value="2">2015-20_MEDI-4030 Neurología (Sección 2)</option>
+								<option value="3">2015-20_MEDI-4037 Cardiología (Sección 3)</option>
+							</select>
+						</div>
+						<input id="accion" name="accion" type="hidden" value="pintarTablaCasosProfesor">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+			   		<form name="casos" id="casos" method="POST">
+						<div class="row">
+							<div class="col-md-12" align="center" id="tablaCasos">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Título del caso</th>
+											<th>Fecha de apertura</th>
+											<th>Fecha de cierre</th>
+											<th>Intentos</th>
+											<th>Acción</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												Caso de prueba
+											</td>
+											<td>
+												2015-09-15 00:00:00
+											</td>
+											<td>
+												2015-09-30 23:00:00
+											</td>
+											<td>
+												2
+											</td>
+											<td>
+												<div class="btn-group" role="group" aria-label="Extra-small button group">
+													<button name="Ingresar al caso" type="button" class="btn btn-icon btn-icon-edit" id="popupIngresar***2">Ingresaral caso</button>
+													<button name="Ver resultados" type="button" class="btn btn-icon btn-icon-publi" id="popupVer***2">Ver resultados</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												Caso de prueba
+											</td>
+											<td>
+												2015-09-15 00:00:00
+											</td>
+											<td>
+												2015-09-30 23:00:00
+											</td>
+											<td>
+												1
+											</td>
+											<td>
+												<div class="btn-group" role="group" aria-label="Extra-small button group">
+													<button name="Ingresar al caso" type="button" class="btn btn-icon btn-icon-edit" id="popupIngresar***2">Ingresaral caso</button>
+													<button name="Ver resultados" type="button" class="btn btn-icon btn-icon-publi" id="popupVer***2">Ver resultados</button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>  
+	    
+	    <!-- footer -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://www.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-med.png" alt="Universidad de los Andes" title="Universidad de los Andes"/>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-6" align="center">
+						<a href="http://conectate.uniandes.edu.co/" target="_blank">
+							<img src="images/logo-conectate.png" alt="Conecta-TE | Centro de Innovación en Tecnología y Educación" title="Conecta-TE | Centro de Innovación en Tecnología y Educación"/>
+						</a>
+					</div>
+				</div>
+			</div>  
+		</div> 
+	</body>
+</html>
